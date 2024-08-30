@@ -1,4 +1,4 @@
-name: Python Code Formatting
+name: Black Formatter
 
 on:
   push:
