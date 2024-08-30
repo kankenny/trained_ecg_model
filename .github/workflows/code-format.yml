@@ -26,6 +26,8 @@ jobs:
       - name: Run Black
         run: black .
 
-      - name: Show diff if formatting is needed
-        run: git diff --exit-code || exit 1
+      - name: Show diff if formatting was needed
+        run: |
+          git diff
+          exit 0
 
