@@ -1,3 +1,4 @@
+fastapi[standard]
 joblib==1.4.2
 matplotlib
 numpy==1.26.4
