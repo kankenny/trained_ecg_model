@@ -2,7 +2,7 @@ import joblib
 import pandas as pd
 import sys
 from fastapi import FastAPI, HTTPException
-from util import ECGData
+from util import ECGData, rename_columns
 
 
 mode = sys.argv[1] if len(sys.argv) > 1 else 'dev'
@@ -26,19 +26,7 @@ async def root():
 async def predict(data: ECGData):
     try:
         df = pd.DataFrame([data.dict()])
-
-        # Rename columns to match the model's expected input
-        df.rename(columns={
-            'ATRIAL_RATE': 'ATRIAL RATE',
-            'VENTRICULAR_RATE': 'VENTRICULAR RATE',
-            'P_AXIS': 'P AXIS',
-            'R_AXIS': 'R AXIS',
-            'T_AXIS': 'T AXIS',
-            'PR_INTERVAL': 'P-R INTERVAL',
-            'QRS_DURATION': 'QRS DURATION',
-            'QT_INTERVAL': 'Q-T INTERVAL',
-            'QTC_CALCULATION_BEZET': 'QTC CALCULATION (BEZET)'
-        }, inplace=True)
+        df = rename_columns(df)
 
         prediction = model.predict(df)
 
