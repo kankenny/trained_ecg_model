@@ -2,23 +2,7 @@ import joblib
 import pandas as pd
 import sys
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-
-
-class ECGData(BaseModel):
-    SEX: str
-    WEIGHT: float
-    DIABETES: str
-    SMOKE: str
-    VENTRICULAR_RATE: float
-    ATRIAL_RATE: float
-    PR_INTERVAL: float
-    QRS_DURATION: float
-    QT_INTERVAL: float
-    QTC_CALCULATION_BEZET: float
-    P_AXIS: float
-    R_AXIS: float
-    T_AXIS: float
+from util import ECGData
 
 
 mode = sys.argv[1] if len(sys.argv) > 1 else 'dev'
