@@ -2,7 +2,7 @@ import pytest
 import joblib
 from endpoint import app
 from fastapi.testclient import TestClient
-from util import ECGData
+from util.util import ECGData
 
 client = TestClient(app)
 
