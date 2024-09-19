@@ -1,13 +1,19 @@
-def placeholder_value():
-    return True
+import os
 
 
-def test_endpoint():
-    assert placeholder_value
+def test_prod_model_existence():
+    base_path = os.path.join(os.getcwd(), 'model')
+
+    file_path_prod = os.path.join(base_path, 'ecg_model_main_module.pkl')
+
+    assert os.path.isfile(file_path_prod), f"File not found: {file_path_prod}"
 
 
-def test_model_existence():
+def test_dev_model_existence():
     import os
 
-    file_path = os.path.join(os.getcwd(), 'model', 'ecg_model.pkl')
-    assert os.path.isfile(file_path), f"File not found: {file_path}"
+    base_path = os.path.join(os.getcwd(), 'model')
+
+    file_path_dev = os.path.join(base_path, 'ecg_model_impr_module.pkl')
+
+    assert os.path.isfile(file_path_dev), f"File not found: {file_path_dev}"
