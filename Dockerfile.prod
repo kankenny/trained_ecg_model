@@ -1,0 +1,19 @@
+FROM python:3.12
+
+LABEL maintainer=kmaddela@nyit.edu  
+
+# Create a non-root user and switch to it
+RUN useradd -m usr
+USER usr
+
+# Set working directory
+WORKDIR /app
+
+# Copy files to container
+COPY . .
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Define the entry point
+ENTRYPOINT ["python", "endpoint.py", "prod"]
