@@ -1,4 +1,4 @@
-# Python Application
+# Trained ECG model
 
 A trained ECG model with modes={`dev`, `prod`}. You can execute the app directly using Python or containerize it using Docker.
 
