@@ -1,0 +1,13 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Virtual environment
+.env
+.venv/
+venv/
+
+# Byte-compiled / optimized / DLL files
+**/__pycache__/
+**/*.py[cod]
