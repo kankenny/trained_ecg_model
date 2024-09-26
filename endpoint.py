@@ -16,10 +16,8 @@ app = FastAPI()
 
 if mode == 'dev':
     model = joblib.load('model/ecg_model_impr_module.pkl')
-elif mode == 'prod':
-    model = joblib.load('model/ecg_model_main_module.pkl')
 else:
-    raise EnvironmentError(f"Invalid mode: {mode}. Expected 'dev' or 'prod'.")
+    model = joblib.load('model/ecg_model_main_module.pkl')
 
 
 @app.get("/")
