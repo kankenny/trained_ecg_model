@@ -33,18 +33,40 @@ def rename_columns(df: pd.DataFrame) -> pd.DataFrame:
     })
 
 
+sample_normal = {
+  "summary": "A subject with a normal ECG",
+  "value": {
+        "SEX": "Female",
+        "WEIGHT": 140.0,
+        "DIABETES": "N",
+        "SMOKE": "Former",
+        "VENTRICULAR_RATE": 68,
+        "ATRIAL_RATE": 68,
+        "PR_INTERVAL": 138,
+        "QRS_DURATION": 82,
+        "QT_INTERVAL": 420,
+        "QTC_CALCULATION_BEZET": 446,
+        "P_AXIS": 60,
+        "R_AXIS": 55,
+        "T_AXIS": 45
+    }
+}
+
 sample_abnormal = {
-  "SEX": "Male",
-  "WEIGHT": 204.59,
-  "DIABETES": "Y",
-  "SMOKE": "Former",
-  "VENTRICULAR_RATE": 74,
-  "ATRIAL_RATE": 74,
-  "PR_INTERVAL": 266,
-  "QRS_DURATION": 88,
-  "QT_INTERVAL": 438,
-  "QTC_CALCULATION_BEZET": 486,
-  "P_AXIS": 37,
-  "R_AXIS": -28,
-  "T_AXIS": 27
+  "summary": "A subject with an abnormal ECG",
+  "value": {
+        "SEX": "Male",
+        "WEIGHT": 204.59,
+        "DIABETES": "Y",
+        "SMOKE": "Former",
+        "VENTRICULAR_RATE": 74,
+        "ATRIAL_RATE": 74,
+        "PR_INTERVAL": 266,
+        "QRS_DURATION": 88,
+        "QT_INTERVAL": 438,
+        "QTC_CALCULATION_BEZET": 486,
+        "P_AXIS": 37,
+        "R_AXIS": -28,
+        "T_AXIS": 27
+  }
 }
