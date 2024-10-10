@@ -31,3 +31,20 @@ def rename_columns(df: pd.DataFrame) -> pd.DataFrame:
         'QT_INTERVAL': 'Q-T INTERVAL',
         'QTC_CALCULATION_BEZET': 'QTC CALCULATION (BEZET)'
     })
+
+
+sample_abnormal = {
+  "SEX": "Male",
+  "WEIGHT": 204.59,
+  "DIABETES": "Y",
+  "SMOKE": "Former",
+  "VENTRICULAR_RATE": 74,
+  "ATRIAL_RATE": 74,
+  "PR_INTERVAL": 266,
+  "QRS_DURATION": 88,
+  "QT_INTERVAL": 438,
+  "QTC_CALCULATION_BEZET": 486,
+  "P_AXIS": 37,
+  "R_AXIS": -28,
+  "T_AXIS": 27
+}

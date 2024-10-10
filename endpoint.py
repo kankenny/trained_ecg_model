@@ -2,9 +2,11 @@ import joblib
 import pandas as pd
 import sys
 
-from fastapi import FastAPI, HTTPException
-from model.transformers import * 
-from util.util import ECGData, rename_columns
+from fastapi import Body, FastAPI, HTTPException
+from typing import Annotated
+
+from model.transformers import *
+from util.util import ECGData, rename_columns, sample_abnormal
 
 
 mode = sys.argv[1] if len(sys.argv) > 1 else "dev"
@@ -26,7 +28,9 @@ async def root():
 
 
 @app.post("/predict")
-async def predict(data: ECGData):
+async def predict(data: Annotated[ECGData,
+                                  Body(examples=[sample_abnormal])
+                                  ]):
     try:
         df = pd.DataFrame([data.dict()])
         df = rename_columns(df)
