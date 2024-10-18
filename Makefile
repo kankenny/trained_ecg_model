@@ -6,7 +6,7 @@ IMAGE_NAME=nyit-etic
 FUNCTION_NAME=ecg
 TAG=latest
 PLATFORM=linux/amd64
-DOCKERFILE=Dockerfile.aws
+DOCKERFILE=Dockerfiles/Dockerfile.aws
 
 all: build tag push
 
