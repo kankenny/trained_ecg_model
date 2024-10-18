@@ -26,7 +26,7 @@ A trained ECG model with modes={`dev`, `prod`}. You can execute the app directly
 
 - Build the image:
   ```docker
-  docker build -t dev-trained-ecg-model:v1 -f Dockerfile.dev
+  docker build -t dev-trained-ecg-model:v1 -f Dockerfiles/Dockerfile.dev
   ```
 - Run via the CLI:
   ```docker
@@ -37,7 +37,7 @@ A trained ECG model with modes={`dev`, `prod`}. You can execute the app directly
 
 - Build the image:
   ```docker
-  docker build -t prod-trained-ecg-model:v1 -f Dockerfile.prod
+  docker build -t prod-trained-ecg-model:v1 -f Dockerfiles/Dockerfile.prod
   ```
 - Run via the CLI:
   ```docker
