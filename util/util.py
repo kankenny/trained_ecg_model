@@ -33,9 +33,19 @@ def rename_columns(df: pd.DataFrame) -> pd.DataFrame:
     })
 
 
+def delimiter_decor(fn):
+    def wrapper(*args, **kwargs):
+        DELIMITER = f'\n\n{"*" * 50}\n\n'
+        print(DELIMITER)
+        result = fn(*args, **kwargs)
+        print(DELIMITER)
+        return result
+    return wrapper
+
+
 sample_normal = {
-  "summary": "A subject with a normal ECG",
-  "value": {
+    "summary": "A subject with a normal ECG",
+    "value": {
         "SEX": "Female",
         "WEIGHT": 140.0,
         "DIABETES": "N",
@@ -53,8 +63,8 @@ sample_normal = {
 }
 
 sample_abnormal = {
-  "summary": "A subject with an abnormal ECG",
-  "value": {
+    "summary": "A subject with an abnormal ECG",
+    "value": {
         "SEX": "Male",
         "WEIGHT": 204.59,
         "DIABETES": "Y",
@@ -68,5 +78,5 @@ sample_abnormal = {
         "P_AXIS": 37,
         "R_AXIS": -28,
         "T_AXIS": 27
-  }
+    }
 }
