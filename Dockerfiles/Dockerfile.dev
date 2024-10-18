@@ -25,4 +25,4 @@ USER usr
 EXPOSE 8001
 
 # Run the FastAPI application using Uvicorn
-ENTRYPOINT ["uvicorn", "endpoint:app", "--host", "0.0.0.0", "--port", "8001"]
+ENTRYPOINT ["fastapi", "dev", "endpoint.py"]
