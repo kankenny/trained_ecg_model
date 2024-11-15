@@ -14,7 +14,7 @@ A python notebook for the complete machine learning workflow to build a classifi
   ```
 - Navigate to the `train_analysis_pynb` dir
   ```bash
-  cd `train_analysis_pynb
+  cd train_analysis_pynb
   ```
 - Train the model using the `ECG_training.pynb` notebook
   ```
