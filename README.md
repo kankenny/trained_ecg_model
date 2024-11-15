@@ -21,7 +21,7 @@ A python notebook for the complete machine learning workflow to build a classifi
   Run all cells of the notebook
   ```
 
-# Trained ECG Model (for Model Inference & Usage of the Model in Production
+# Trained ECG Model (for Model Inference & Usage of the Model in Production in an AWS Lambda Endpoint)
 *Note: This model is currently unpublished in AWS Lambda due to privacy purposes and requires prior approval for use.*
 
 A trained ECG model with modes={`dev`, `prod`}. You can execute the app directly using Python or containerize it using Docker.
