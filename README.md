@@ -3,7 +3,7 @@
 - Python 3.x
 - pip
 
-# ECG model training
+# ECG Model Training (for Experimentation & the Study Associated with it)
 
 A python notebook for the complete machine learning workflow to build a classifier for ECG-related biometrics data.
 
@@ -21,7 +21,8 @@ A python notebook for the complete machine learning workflow to build a classifi
   Run all cells of the notebook
   ```
 
-# Trained ECG model
+# Trained ECG Model (for Model Inference & Usage of the Model in Production
+*Note: This model is currently unpublished in AWS Lambda due to privacy purposes and requires prior approval for use.*
 
 A trained ECG model with modes={`dev`, `prod`}. You can execute the app directly using Python or containerize it using Docker.
 
